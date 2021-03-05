@@ -5,11 +5,12 @@
       <span class="text-primary">{{ numeracion }}. </span>
       <span class="noticia-source-name">{{noticia.source.name}}</span>
     </ion-card-subtitle>
-    <ion-card-title>{{noticia.title}}</ion-card-title>
+    <ion-card-title (click)="abrirNoticia()">{{noticia.title}}</ion-card-title>
   </ion-card-header>
 
   <ion-img  [src]="noticia.urlToImage"
             *ngIf="noticia.urlToImage"
+            (click)="abrirNoticia()"
   ></ion-img>
 
   <ion-card-content>
